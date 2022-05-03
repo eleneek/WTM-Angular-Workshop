@@ -1,0 +1,73 @@
+.wrapper,
+.clip {
+  width: 100%;
+  height: 120px;
+  position: absolute;
+  bottom: 0;
+}
+.clip {
+  clip-path: polygon(100% 0%, 0% 100%, 100% 100%);
+
+  background: linear-gradient(
+    200deg,
+    #528dff 7.17%,
+    #528dff 37.47%,
+    rgba(219, 199, 53, 0.794372) 42.53%,
+    rgba(221, 200, 51, 0.802597) 44.56%,
+    rgba(232, 205, 34, 0.868398) 48.1%,
+    #ffd600 55.18%,
+    #ffd600 55.19%,
+    rgba(242, 209, 20, 0.924799) 63.79%,
+    rgba(250, 212, 8, 0.97196) 68.33%,
+    rgba(82, 141, 255, 0) 68.34%,
+    rgba(250, 212, 8, 0.97196) 68.35%,
+    rgba(250, 212, 8, 0.97196) 70.37%,
+    rgba(250, 212, 8, 0.97196) 70.38%,
+    rgba(250, 212, 8, 0.97196) 73.39%,
+    rgba(188, 186, 100, 0.61039) 73.4%,
+    rgba(250, 212, 8, 0.97196) 73.41%,
+    rgba(250, 212, 8, 0.97196) 73.42%,
+    rgba(250, 212, 8, 0.97196) 77.45%
+  );
+}
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 75px;
+
+  .logo-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    img {
+      margin-right: 15px;
+    }
+  }
+
+  .list {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    .header,
+    a {
+      font-size: 15px;
+      font-weight: 600;
+
+      &:not(:last-child) {
+        margin-bottom: 8px;
+      }
+      &:not(.header) {
+        cursor: pointer;
+      }
+    }
+
+    .header {
+      color: #528dff;
+    }
+  }
+}
