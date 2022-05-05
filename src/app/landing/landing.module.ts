@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 
 import { LandingRoutingModule } from './landing-routing.module';
 import { MainPageComponent } from './main-page/main-page.component';
+import { DialogComponent } from './dialog/dialog.component';
 
 
 @NgModule({
   declarations: [
-    MainPageComponent
+    MainPageComponent,
+    DialogComponent
   ],
   imports: [
     CommonModule,
