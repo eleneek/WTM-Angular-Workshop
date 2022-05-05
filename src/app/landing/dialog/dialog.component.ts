@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dialog',
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DialogComponent implements OnInit {
 
-  constructor() { }
+  @Output() onCloseDialog = new EventEmitter();
+
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
+  closeDialog() {
+    this.onCloseDialog.emit();
+  }
+
+  redirectToCreditCard() {
+    this.router.navigateByUrl('donation/credit-card');
+  }
+
+  redirectToItem() {
+    this.router.navigateByUrl('donation/item');
+  }
 }

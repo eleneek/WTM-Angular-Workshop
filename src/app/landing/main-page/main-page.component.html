@@ -10,7 +10,7 @@
         Connects donors and companies in almost <br />
         every country in the world
       </p>
-      <button>start</button>
+      <button (click)="showDialog()">start</button>
     </div>
     <div>
       <img src="../../../assets/main-banner.png" alt="Main Banner" />
@@ -79,4 +79,5 @@
     </div>
   </div>
 </div>
-<app-dialog></app-dialog>
+
+<app-dialog (onCloseDialog)="onCloseDialog()" *ngIf="dialogVisible"></app-dialog>

@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainPageComponent implements OnInit {
 
+  dialogVisible = false;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  showDialog() {
+    this.dialogVisible = true;
+  }
+
+  onCloseDialog() {
+    this.dialogVisible = false;
   }
 
 }

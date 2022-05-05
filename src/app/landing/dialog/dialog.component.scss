@@ -1,13 +1,21 @@
 .wrapper {
-  position: absolute;
-  top: calc(50% - 75px);
-  left: calc(50% - 125px);
   width: 250px;
   height: 150px;
-  z-index: 10;
-  background-color: #f9f9f9;
   padding: 20px;
   border-radius: 10px;
+  background-color: #f9f9f9;
+  position: absolute;
+  top: 35%;
+  left: calc(50% - 125px);
+  z-index: 10;
+
+  img {
+    width: 10px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+  }
 
   h3 {
     width: 100%;
@@ -30,10 +38,14 @@
       border-radius: 20px;
       box-shadow: 4px 0px 4px rgba(250, 212, 8, 0.97196),
         0px 4px 4px rgba(250, 212, 8, 0.97196);
-      color: #528dff;
       font-weight: 600;
       border: none;
       cursor: pointer;
+
+      &:last-child {
+        box-shadow: 4px 0px 4px rgba(8, 52, 250, 0.972),
+        0px 4px 4px rgba(8, 85, 250, 0.972);
+      }
     }
   }
 }
